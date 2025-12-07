@@ -1,8 +1,4 @@
 # 🏠 Na Porta - Frontend
-https://img.shields.io/badge/React-18.2-blue
-https://img.shields.io/badge/TypeScript-5.0-blue
-https://img.shields.io/badge/Vite-5.0-purple
-https://img.shields.io/badge/Tailwind-3.0-38B2AC
 
 ### Frontend moderno para o sistema de gestão de pedidos Na Porta, desenvolvido em React com TypeScript.
 
