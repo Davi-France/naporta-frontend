@@ -36,12 +36,10 @@ Certifique-se que seu backend está rodando:
 ```bash
 # O backend deve estar acessível em:
 # http://localhost:3000
+```
 
-# Verifique se pode acessar:
-curl http://localhost:3000
-# Deve retornar alguma resposta da API
 Passo 4: Inicie o frontend
-bash
+```bash
 npm run dev
 # ou
 yarn dev
@@ -50,9 +48,34 @@ pnpm dev
 O frontend estará disponível em: http://localhost:5173
 ```
 
-### 🔗 Conexão com o Backend
-O frontend espera que o backend esteja rodando em http://localhost:3000.
+  
+### 1. Primeiro, garanta que o backend está rodando
+```bash
+# No projeto do backend:
+cd backend/na-porta-api
+npm run start:dev
+```
 
+###  2. Em outro terminal, inicie o microserviço Go:
+```bash
+cd backend/naporta-go
+go run main.go
+```
+
+### 3. Acesse o frontend
+Abra http://localhost:5173
+
+### 4. Crie uma conta
+Vá para /register e crie um usuário
+
+### 5. Faça login
+Use as credenciais criadas em /login
+
+### 6. Explore as funcionalidades
+- Crie pedidos com diferentes itens
+- Teste os filtros de busca
+- Calcule totais com o microserviço Go
+- Edite status dos pedidos
 
 ## 🎨 Tecnologias Utilizadas
 - React 18 com TypeScript
@@ -92,36 +115,6 @@ O frontend espera que o backend esteja rodando em http://localhost:3000.
 - 📅 Filtro por data de criação ou entrega
 - 🔄 Limpeza rápida de filtros
 - 🧪 Testando a Aplicação
-
-  
-### 1. Primeiro, garanta que o backend está rodando
-```bash
-# No projeto do backend:
-cd backend/na-porta-api
-npm run start:dev
-```
-
-###  2. Em outro terminal, inicie o microserviço Go:
-```bash
-cd backend/naporta-go
-go run main.go
-```
-
-### 3. Acesse o frontend
-Abra http://localhost:5173
-
-### 4. Crie uma conta
-Vá para /register e crie um usuário
-
-### 5. Faça login
-Use as credenciais criadas em /login
-
-### 6. Explore as funcionalidades
-- Crie pedidos com diferentes itens
-- Teste os filtros de busca
-- Calcule totais com o microserviço Go
-- Edite status dos pedidos
-
 
 ## 🎯 Motivação do Projeto
 
