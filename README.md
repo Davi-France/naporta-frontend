@@ -9,14 +9,18 @@ ATENÇÃO: Este frontend depende do backend para funcionar. Antes de começar, v
 - ✅ Microserviço Go em execução
 
 ## 📦 Backend necessário: na-porta-backend
+caso  nao tenha, va ate esse repositorio clone e rode na sua maquina
+git clone [(https://github.com/Davi-France/naporta-backend)]
 
 ## 🚀 Começando Rápido
 ### Passo 1: Clone este repositório
 
-git clone [(https://github.com/Davi-France/naporta-backend)]
-cd frontend-na-porta
+git clone https://github.com/Davi-France/naporta-frontend.git
 
-
+- e depois
+```bash
+cd frontend-naporta
+```
 Passo 2: Instale as dependências
 ```bash
 npm install
