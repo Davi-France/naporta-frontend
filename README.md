@@ -13,7 +13,7 @@ ATENÇÃO: Este frontend depende do backend para funcionar. Antes de começar, v
 ## 🚀 Começando Rápido
 ### Passo 1: Clone este repositório
 ```bash
-git clone <[url-deste-repositorio](https://github.com/Davi-France/naporta-backend)>
+git clone [[<[url-deste-repositorio](https://github.com/Davi-France/naporta-backend)>](https://github.com/Davi-France/naporta-backend)](https://github.com/Davi-France/naporta-backend.git)
 cd frontend-na-porta
 ```
 
