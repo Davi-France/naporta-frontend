@@ -1,73 +1,137 @@
-# React + TypeScript + Vite
+# 🏠 Na Porta - Frontend
+https://img.shields.io/badge/React-18.2-blue
+https://img.shields.io/badge/TypeScript-5.0-blue
+https://img.shields.io/badge/Vite-5.0-purple
+https://img.shields.io/badge/Tailwind-3.0-38B2AC
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+### Frontend moderno para o sistema de gestão de pedidos Na Porta, desenvolvido em React com TypeScript.
 
-Currently, two official plugins are available:
+## ⚠️ Pré-requisitos
+ATENÇÃO: Este frontend depende do backend para funcionar. Antes de começar, você precisa:
+- ✅ Ter o backend instalado e rodando
+- ✅ MongoDB configurado
+- ✅ Microserviço Go em execução
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 📦 Backend necessário: na-porta-backend
 
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## 🚀 Começando Rápido
+### Passo 1: Clone este repositório
+```bash
+git clone <[url-deste-repositorio](https://github.com/Davi-France/naporta-backend)>
+cd frontend-na-porta
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+Passo 2: Instale as dependências
+```bash
+npm install
+# ou
+yarn install
+# ou
+pnpm install
 ```
+
+Passo 3: Configure o backend
+Certifique-se que seu backend está rodando:
+
+```bash
+# O backend deve estar acessível em:
+# http://localhost:3000
+
+# Verifique se pode acessar:
+curl http://localhost:3000
+# Deve retornar alguma resposta da API
+Passo 4: Inicie o frontend
+bash
+npm run dev
+# ou
+yarn dev
+# ou
+pnpm dev
+O frontend estará disponível em: http://localhost:5173
+```
+
+### 🔗 Conexão com o Backend
+O frontend espera que o backend esteja rodando em http://localhost:3000.
+
+
+## 🎨 Tecnologias Utilizadas
+- React 18 com TypeScript
+- Vite para desenvolvimento ultrarrápido
+- Tailwind CSS para estilização
+- Shadcn/ui para componentes prontos
+- React Router DOM para navegação
+- Axios para requisições HTTP
+- React Hook Form + Zod para validação
+- Sonner para notificações
+- date-fns para datas
+
+## 🔐 Fluxo de Autenticação
+- Registro → Cria usuário no backend
+- Login → Obtém token JWT
+- Acesso → Token é armazenado e usado em todas as requisições
+- Logout → Remove token e redireciona para login
+
+## 📊 Funcionalidades Implementadas
+### ✅ Dashboard
+
+- Visão geral de pedidos
+- Estatísticas em tempo real
+- Últimos pedidos criados
+- Gráfico de distribuição por status
+
+### ✅ Gestão de Pedidos
+- Criação: Formulário com validação completa
+- Listagem: Tabela com paginação e filtros
+- Edição: Atualização de status e informações
+- Exclusão: Soft delete (exclusão lógica)
+- Cálculo: Integração com microserviço Go
+
+###✅ Filtros Avançados
+- 🔍 Busca por número, cliente ou documento
+- 🏷️ Filtro por status (novo, aceito, produção, etc.)
+- 📅 Filtro por data de criação ou entrega
+- 🔄 Limpeza rápida de filtros
+- 🧪 Testando a Aplicação
+
+  
+### 1. Primeiro, garanta que o backend está rodando
+```bash
+# No projeto do backend:
+cd backend/na-porta-api
+npm run start:dev
+```
+
+###  2. Em outro terminal, inicie o microserviço Go:
+```bash
+cd backend/naporta-go
+go run main.go
+```
+
+### 3. Acesse o frontend
+Abra http://localhost:5173
+
+### 4. Crie uma conta
+Vá para /register e crie um usuário
+
+### 5. Faça login
+Use as credenciais criadas em /login
+
+### 6. Explore as funcionalidades
+- Crie pedidos com diferentes itens
+- Teste os filtros de busca
+- Calcule totais com o microserviço Go
+- Edite status dos pedidos
+
+
+## 🎯 Motivação do Projeto
+
+Este projeto frontend foi desenvolvido **por iniciativa própria**, como um desafio pessoal para complementar o backend que havia desenvolvido anteriormente para a Na Porta.
+
+### 🚀 O Desafio
+
+Apesar de não ter recebido um desafio formal de frontend, decidi criar uma interface completa que demonstrasse:
+
+1. **Integração prática** com uma API REST real (a que eu mesmo desenvolvi)
+2. **Aplicação de conhecimentos** em React, TypeScript e bibliotecas modernas
+3. **Criação de uma UX/UI profissional** para um sistema real de gestão
+4. **Implementação de boas práticas** como validação, tratamento de erros e segurança
